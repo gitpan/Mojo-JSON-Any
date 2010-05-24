@@ -9,7 +9,7 @@ use Test::More;
 
 plan skip_all => 'JSON::XS is required for this test'
   unless eval { require JSON::XS; 1 };
-plan tests => 82;
+plan tests => 86;
 
 use Mojo::ByteStream 'b';
 
@@ -18,6 +18,12 @@ use_ok('Mojo::JSON::Any');
 
 my $json = Mojo::JSON::Any->new;
 isa_ok($json, 'Mojo::JSON::XS');
+
+# Test if overload behaves correctly
+ok($json->true == $json->true);
+ok($json->true != $json->false);
+ok($json->true eq $json->true);
+ok($json->true ne $json->false);
 
 # Decode array
 my $array = $json->decode('[]');

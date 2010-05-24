@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Mojo-JSON-Any
-version:            0.990102
+version:            0.990103
 abstract:           Use JSON::XS when it's available
 author:
     - Viacheslav Tykhanovskyi <vti@cpan.org>
@@ -18,7 +18,7 @@ no_index:
         - t
         - inc
         - t
-generated_by:       ExtUtils::MakeMaker version 6.50
+generated_by:       ExtUtils::MakeMaker version 6.56
 meta-spec:
     url:      http://module-build.sourceforge.net/META-spec-v1.4.html
     version:  1.4
